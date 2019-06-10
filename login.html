@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue" charset="utf-8"></script>
+    <title>login page</title>
+    <link rel="stylesheet" href="home.css">
+  </head>
+  <body>
+    <center>
+    <div id="login" >
+        <h1>Login Form</h1>
+      <form  method="post" padding=200px>
+          <form class="" action="regis.html" method="post">
+
+        <table id="lg">
+          <tr>
+            <td>Username</td><td><input type="text" name="uname" placeholder="Username" id="un"></td>
+          </tr>
+          <tr>
+            <td>Password</td><td><input type="password" name="name" placeholder="Password" id="pwd"></td>
+          </tr>
+          <tr>
+            <td><input type="submit" name="login" value="Login" v-on:click="log_in()" id="log"></td>
+            <td><a href="">Forget Password</a></td>
+          </tr>
+
+        </table>
+
+      
+
+
+      </form>
+    </div>
+    <script type="text/javascript">
+    var login = new Vue({
+      el:"#login",
+      methods:{
+        log_in:function()
+        {
+          if (document.getElementById('un').value=="admin" && document.getElementById('pwd').value=="admin") {
+            document.write("Login Successfully" );
+          }
+          else {
+            alert("Invalid username or password ");
+          }
+        }
+      }
+    });
+
+    </script>
+
+  </body>
+</html>
